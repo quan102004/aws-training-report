@@ -1,5 +1,5 @@
-baseURL = "https://workshop-sample.fcjuni.com/"
-relativeURLs = false
+baseURL = "https://quan102004.github.io/aws-training-report/"
+relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 
