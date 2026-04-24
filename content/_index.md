@@ -8,9 +8,9 @@ chapter: false
     
 # Internship Report
 
-{{% notice warning %}}
+<!-- {{% notice warning %}}
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 ### Student Information:
 &emsp; **Full Name:** Võ Hoàng Quân
@@ -19,7 +19,7 @@ chapter: false
 
 &emsp; **Email:** quandahoang@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** Ho Chi Minh City University of Technology 
 
 &emsp; **Major:** Information Technology
 
