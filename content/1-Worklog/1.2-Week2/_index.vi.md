@@ -5,55 +5,40 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Học VPC cơ bản: CIDR, Subnet, Route Table, IGW, NAT...
+* Thực hành tạo VPC và các thành phần trong đó.
+* Thực hành về các kiến trúc Route 53, VPC Peering, Transit VPC  
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Học về VPC , các khái niệm cơ bản: CIDR, Subnet, Route Table, IGW, NAT...                                                                                                                    | 27/04/2026   | 27/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Tìm hiểu các kiến trúc của VPC, vẽ các mô hình kiến trúc <br>                                                                                                                            | 28/04/2026   | 28/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Thực hành bài tập về VPC                                                                                                                                                                   | 29/04/2026   | 29/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Thực hành kiến trúc Route 53, VPC                                                                                                                                                          | 30/04/2026   | 30/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Thực hành: Kiến trúc VPC pearing, transit VPC                                                                                                                                             | 01/05/2026   | 01/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm được các khái niệm cơ bản về VPC
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu và nắm vững các khái niệm cơ bản về VPC như CIDR, Subnet, Route Table, IGW, NAT và các thành phần khác.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm được các khái niệm cơ bản về Route 53 và VPC Peering, Transit VPC
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Vẽ và trình bày các kiến trúc VPC cơ bản, bao gồm các thành phần và cách thức hoạt động.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Triển khai thành công VPC tuỳ chỉnh trên AWS với đầy đủ Public Subnet, Private Subnet, kết nối Internet thông qua Internet Gateway (IGW) và NAT Gateway.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Cấu hình Route Table để điều hướng chính xác luồng truy cập (traffic routing) trong VPC.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thiết lập và kiểm tra kết nối thành công giữa các VPC khác nhau bằng VPC Peering.
 
+* Nắm bắt và thực hành cách sử dụng Route 53 để định tuyến DNS và phân giải tên miền.
 

@@ -5,53 +5,39 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn basic VPC concepts: CIDR, Subnet, Route Table, IGW, NAT, etc.
+* Practice creating a VPC and its components.
+* Practice on architectures: Route 53, VPC Peering, Transit VPC.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task                                                                                                                                                                                        | Start Date | Completion Date | Reference Material                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| 2   | - Learn about VPC and basic concepts: CIDR, Subnet, Route Table, IGW, NAT, etc.                                                                                                             | 27/04/2026 | 27/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Explore VPC architectures, draw architectural models <br>                                                                                                                                 | 28/04/2026 | 28/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Practice exercises on VPC                                                                                                                                                                 | 29/04/2026 | 29/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Practice on Route 53 and VPC architectures                                                                                                                                                | 30/04/2026 | 30/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Practice: VPC Peering architecture, Transit VPC                                                                                                                                           | 01/05/2026 | 01/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Grasped the basic concepts of VPC.
 
-* Successfully created and configured an AWS Free Tier account.
+* Understood and mastered basic VPC concepts such as CIDR, Subnet, Route Table, IGW, NAT, and other components.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Grasped the basic concepts of Route 53, VPC Peering, and Transit VPC.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Drew and presented basic VPC architectures, including their components and how they operate.
 
-* Used AWS CLI to perform basic operations such as:
+* Successfully deployed a custom VPC on AWS with Public Subnets, Private Subnets, and internet connectivity via Internet Gateway (IGW) and NAT Gateway.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Configured Route Tables to precisely route traffic within the VPC.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Established and successfully tested connectivity between different VPCs using VPC Peering.
+
+* Grasped and practiced using Route 53 for DNS routing and domain name resolution.
