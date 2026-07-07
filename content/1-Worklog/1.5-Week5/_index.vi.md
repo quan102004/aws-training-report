@@ -5,55 +5,32 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Học tập và nắm vững các dịch vụ bảo mật (Security, Identity, & Compliance) trên AWS.
+* Tìm hiểu sâu về AWS Identity and Access Management (IAM) để quản lý danh tính và quyền truy cập.
+* Tìm hiểu các dịch vụ bảo mật nâng cao: Amazon Cognito, AWS Organizations, AWS IAM Identity Center, AWS Key Management Service (KMS), và AWS Security Hub.
+* Thực hành và hoàn thành các bài Lab bảo mật bao gồm: Lab 18, 22, 27, 28, 33, 44, 48.
+* Nghiên cứu và tìm hiểu sâu hơn các kiến thức chuyên sâu liên quan đến bảo mật đám mây.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 1   | - Học về dịch vụ bảo mật trên AWS                                                                                             | 18/05/2026   | 18/05/2026      |<https://cloudjourney.awsstudygroup.com/> 
+| 2   | - Tìm hiểu về Amazon Identity and access management                                            | 19/05/2026   | 19/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Học về Cognito , AWS Organization , AWS Identity Center , Amazon Key Management Service , AWS Security Hub | 20/05/2026   | 20/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Thực hành bài lab 18, lab 22, lab 27, lab 28 | 21/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành:** lab 33, lab 44, lab 48 và tìm hiểu một số kiến thức chuyên sâu                                                                                   | 22/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Nắm vững kiến thức nền tảng và tầm quan trọng của các giải pháp bảo mật trên đám mây AWS.
+* Hiểu sâu về AWS IAM và có khả năng phân quyền chi tiết, quản lý danh tính người dùng và tài nguyên an toàn.
+* Nắm bắt cơ chế hoạt động và vai trò của các công cụ bảo mật nâng cao: Cognito (quản lý người dùng ứng dụng), AWS Organizations (quản lý đa tài khoản), IAM Identity Center (SSO), KMS (quản lý khóa mã hóa) và Security Hub (quản lý bảo mật tập trung).
+* Thực hành thành công chuỗi bài Lab về bảo mật:
+  * **Lab 18, 22, 27, 28**: Cấu hình các cơ chế bảo mật cơ bản, mã hóa và kiểm soát truy cập.
+  * **Lab 33, 44, 48**: Quản trị tài khoản, phân quyền nâng cao và theo dõi sự tuân thủ bảo mật trên hệ thống.
+* Trang bị thêm các kiến thức chuyên môn về kiến trúc bảo mật đạt tiêu chuẩn tối ưu trên AWS.
 
 

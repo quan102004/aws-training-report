@@ -5,53 +5,31 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn and master Storage solutions on AWS.
+* Deep dive into Amazon Simple Storage Service (S3): configure Access Points, S3 Static Website Hosting, CORS configuration, and access control management.
+* Practice and complete exercises for Lab 13, 14, 25, and 57.
+* Explore additional knowledge and services related to storage management on AWS.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 1   | - Learn about storage services on AWS                                                                                                                                                                  | 11/05/2026 | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Learn about Amazon Simple Storage Service (S3) <br>&emsp; + Access Point <br>&emsp; + S3 Static Website & CORS <br>&emsp; + Control Access <br>&emsp; + ...                                          | 12/05/2026 | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Practice Lab 13 and Lab 14                                                                                                                                                                           | 13/05/2026 | 13/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Practice Lab 25 and Lab 57                                                                                                                                                                           | 14/05/2026 | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Explore supplementary knowledge in this module                                                                                                                                                       | 15/05/2026 | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered basic concepts and the role of storage services on AWS.
+* Acquired a deep understanding and the ability to configure Amazon S3: successfully deployed Static Website Hosting, set up Cross-Origin Resource Sharing (CORS), configured Access Points, and managed access control effectively.
+* Successfully completed all scheduled practical Labs:
+  * **Lab 13, 14**: Practiced basic and advanced operations with Amazon S3.
+  * **Lab 25, 57**: Configured security, permissions, and storage system integrations.
+* Acquired additional advanced knowledge within the AWS Storage module to support system architecture designs.

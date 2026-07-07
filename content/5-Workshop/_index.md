@@ -1,31 +1,30 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: "2026-07-06"
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Serverless Job Application Tracker
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+Our capstone project is a **Serverless Job Application Tracker** — a system that helps users manage and follow up on their job applications, built entirely on a serverless architecture on AWS in the **ap-southeast-1 (Singapore)** region.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+Main features:
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+- Create, track and update the status of each job application (Applied / Interview / Offer / Rejected)
+- Attach a CV (PDF) to each application, uploaded/downloaded **directly to S3 via Presigned URLs**
+- **Automatic email reminders** when an application is due for follow-up (daily cron at 9:00 AM)
+- Operational monitoring (CloudWatch Alarm → SNS) and full API auditing (CloudTrail)
+
+#### Architecture
+
+![Architecture Diagram](/images/capstone/architecture-v6.png)
+
+The system consists of 10 main flows, numbered on the diagram and described in detail in the subsections below.
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+{{% children /%}}

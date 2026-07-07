@@ -18,25 +18,21 @@ pre: " <b> 1.1. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 20/04/2026   | 20/04/2026      |                                           |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database                                                                  | 21/04/2026   | 21/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Làm 5 bài kiếm 100 $                                      | 22/04/2026   | 22/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu cách tối ưu hóa chi phí của AWS                                                                                                                                                  | 23/04/2026   | 23/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Học về IAM là gì và cách sử dụng sao cho hiệu quả <br> - **Thực hành:** Tạo IAM user và các group để quản lý user                                                                         | 24/04/2026   | 24/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 1   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 20/04/2026   | 20/04/2026      |                                           |
+| 2   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database                                                                  | 21/04/2026   | 21/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Làm 5 bài kiếm 100 $                                      | 22/04/2026   | 22/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu cách tối ưu hóa chi phí của AWS                                                                                                                                                  | 23/04/2026   | 23/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Học về IAM là gì và cách sử dụng sao cho hiệu quả <br> - **Thực hành:** Tạo IAM user và các group để quản lý user                                                                         | 24/04/2026   | 24/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 1:
 
-* Làm quen với văn hóa, nội quy và các thành viên trong cộng đồng First Cloud Journey (FCJ).
-* Nắm vững khái niệm cơ bản về AWS và các nhóm dịch vụ cốt lõi: 
-  * Compute (EC2, Lambda...)
-  * Storage (S3, EBS...)
-  * Networking (VPC...)
-  * Database (RDS, DynamoDB...)
-* Thiết lập thành công tài khoản AWS Free Tier và biết cách tìm hiểu các phương pháp tối ưu hóa chi phí trên AWS.
-* Làm quen và sử dụng thành thạo hai công cụ quản trị chính:
-  * **AWS Management Console**: Biết cách tìm, truy cập và sử dụng các dịch vụ từ giao diện web.
-  * **AWS CLI**: Cài đặt, cấu hình (Access Key, Secret Key, Default Region) và thực hiện các câu lệnh cơ bản (kiểm tra thông tin tài khoản, lấy danh sách region, xem dịch vụ EC2, tạo key pair...).
-* Hiểu và thực hành thành công dịch vụ AWS IAM (Identity and Access Management):
-  * Nắm được khái niệm và tầm quan trọng của IAM.
-  * Thực hành tạo IAM User, IAM Group và phân quyền quản lý người dùng hiệu quả để tăng tính bảo mật.
+* Làm quen với văn hóa, nội quy và kết nối thành công với các thành viên trong cộng đồng First Cloud Journey (FCJ).
+* Nắm vững các khái niệm cơ bản về điện toán đám mây và 4 nhóm dịch vụ cốt lõi trên AWS: Compute, Storage, Networking và Database.
+* Thiết lập thành công tài khoản AWS Free Tier, tìm hiểu các phương pháp tối ưu hóa chi phí và hoàn thành các bài viết/thực hành để nhận credit $100.
+* Làm quen và sử dụng thành thạo hai công cụ quản lý chính của AWS:
+  * **AWS Management Console**: Giao diện web trực quan để tìm kiếm và sử dụng dịch vụ.
+  * **AWS CLI**: Cài đặt, cấu hình thông tin bảo mật (Access Key, Secret Key, Region) và thực thi các câu lệnh cơ bản.
+* Hiểu và thực hành quản lý danh tính với AWS IAM (Identity and Access Management):
+  * Nắm được khái niệm và tầm quan trọng của việc quản lý danh tính.
+  * Thực hành tạo IAM User, IAM Group và phân quyền hạn chế theo nguyên tắc đặc quyền tối thiểu (least privilege).
