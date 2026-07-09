@@ -70,13 +70,13 @@ ns-1391.awsdns-45.org
 
 #### Bước 4: Trỏ nameserver tại nhà đăng ký
 
-1. Đăng nhập trang quản trị của nhà đăng ký (Vietnix)
-2. Vào **Quản lý tên miền** → chọn domain → tab **Nameservers**
-3. Chọn **Sử dụng Nameserver tuỳ chọn**
+1. Đăng nhập trang quản trị của nhà đăng ký (name.com)
+2. Vào **Manage** → chọn domain → tab **Nameservers**
+3. Chọn **Custom**
 4. Xoá nameserver mặc định, dán **4 nameserver của AWS** (không có dấu chấm ở cuối)
-5. Chọn **Thay đổi Nameservers**
+5. Chọn **Save**
 
-![Vietnix nameservers](/images/5-Workshop/5.9-WAF-Route53/vietnix-ns.png)
+![name.com nameservers](/images/5-Workshop/5.9-WAF-Route53/name-ns.png)
 
 {{% notice warning %}}
 Sau khi đổi nameserver, DNS cần **propagate** từ 15 phút đến vài giờ (đôi khi tới 24–48 giờ). Kiểm tra tiến độ tại [dnschecker.org](https://dnschecker.org) — chọn type **NS**, khi kết quả trả về `awsdns...` là đã hoàn tất.
@@ -85,7 +85,7 @@ Sau khi đổi nameserver, DNS cần **propagate** từ 15 phút đến vài gi�
 #### Bước 5: Gắn custom domain vào Amplify
 
 1. Vào **Amplify** → app → **Hosting** → **Custom domains** → **Add domain**
-2. Nhập domain (ví dụ `jobtracker-fcj.io.vn`) → **Configure domain**
+2. Nhập domain (ví dụ `jobtrackerfcj.dev`) → **Configure domain**
 3. Amplify tự cấp **SSL certificate miễn phí** và hiển thị các bản ghi DNS cần thêm
 4. Nếu hosted zone cùng account, Amplify tự thêm record vào Route 53; nếu khác account, copy record thủ công vào hosted zone
 5. Có thể map cả root domain và subdomain `www`

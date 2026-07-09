@@ -1,36 +1,30 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 1.8. </b> "
+title : "Worklog Tuần 8"
+date : "2026-06-08"
+weight : 8
+chapter : false
+pre : " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 8:
 
-* Thiết kế, triển khai và hoàn thiện dự án Capstone: **Serverless Job Application Tracker**.
-* Tích hợp thành công các dịch vụ Serverless: API Gateway, Cognito, DynamoDB, Lambda, S3, Amplify, WAF, Route 53, SES và CloudWatch/CloudTrail.
+- Chọn đề tài dự án cuối khoá và xác định phạm vi.
+- Củng cố kiến thức nền về S3 và thiết lập môi trường phát triển cục bộ.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+### Công việc thực hiện trong tuần:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 1 | - Khảo sát yêu cầu và thiết kế kiến trúc hệ thống tổng quan <br> - Thiết lập CSDL Amazon DynamoDB và cấu hình Amazon Cognito để quản lý người dùng | 08/06/2026 | 08/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - Phát triển các hàm AWS Lambda xử lý các tác vụ CRUD ứng tuyển việc làm <br> - Tích hợp và cấu hình Amazon API Gateway | 09/06/2026 | 09/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Tạo S3 bucket lưu trữ CV <br> - Viết logic sinh Presigned URL để upload/download CV trực tiếp từ trình duyệt một cách an toàn | 10/06/2026 | 10/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Cấu hình Amazon SES để gửi email <br> - Thiết lập Amazon EventBridge Scheduler kích hoạt Lambda gửi thông báo nhắc nhở hằng ngày | 11/06/2026 | 11/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Triển khai ứng dụng Frontend lên AWS Amplify <br> - Cấu hình giám sát vận hành qua CloudWatch Alarm, SNS và ghi log kiểm toán qua CloudTrail | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - So sánh bốn đề tài: phát hiện bất thường, quét lỗ hổng, bảng theo dõi chi phí, theo dõi đơn ứng tuyển<br>- Đánh giá theo phạm vi, chi phí và thế mạnh an toàn thông tin của nhóm | 08/06/2026 | 08/06/2026 | |
+| 3 | - Chọn đề tài **Job Application Tracker**<br>- Xác định phạm vi chức năng: quản lý đơn ứng tuyển, lưu trữ CV, nhắc lịch follow-up | 09/06/2026 | 09/06/2026 | |
+| 4 | - Ôn lại kiến thức nền S3: bucket, object, storage class, lifecycle policy<br>- Ôn lại IAM user, role và policy | 10/06/2026 | 10/06/2026 | |
+| 5 | - **Thực hành:** cài đặt và cấu hình AWS CLI trên Windows<br>- Kiểm tra credentials và region mặc định (`ap-southeast-1`) | 11/06/2026 | 11/06/2026 | |
+| 6 | - Phác thảo phiên bản đầu tiên của kiến trúc hệ thống<br>- Liệt kê các dịch vụ AWS dự kiến sử dụng | 12/06/2026 | 12/06/2026 | |
 
 ### Kết quả đạt được tuần 8:
 
-* Thiết kế và triển khai hoàn chỉnh ứng dụng **Serverless Job Application Tracker** hoạt động ổn định trên AWS, đáp ứng đầy đủ yêu cầu nghiệp vụ.
-* Đảm bảo tính bảo mật cho hệ thống bằng cách phân quyền chi tiết với IAM, xác thực người dùng với Cognito và tích hợp WAF để chống lạm dụng.
-* Hoàn thành triển khai luồng upload/download file CV an toàn qua S3 Presigned URL, giúp giảm tải băng thông cho máy chủ và tăng tốc độ xử lý.
-* Xây dựng thành công cơ chế gửi email nhắc nhở tự động, đảm bảo người dùng luôn được thông báo đúng hạn follow-up.
-* Cấu hình đầy đủ các hệ thống giám sát tự động giúp phát hiện sự cố nhanh chóng và theo dõi hoạt động hệ thống qua log kiểm toán (audit log).
-
-
-
+- Chọn được đề tài hoàn toàn serverless, nằm trong Free Tier và phù hợp với nền tảng bảo mật của nhóm.
+- Xác định phạm vi ban đầu của hệ thống Job Application Tracker.
+- Củng cố kiến thức nền về S3 và IAM.
+- Cài đặt và cấu hình AWS CLI trên máy cục bộ, sẵn sàng cho phần thực hành.
+- Hoàn thành bản phác thảo kiến trúc đầu tiên để đưa vào rà soát ở tuần sau.

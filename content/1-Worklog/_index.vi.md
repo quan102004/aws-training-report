@@ -12,7 +12,6 @@ pre: " <b> 1. </b> "
 
 **Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
 
-
 Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
 
 **Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản (AWS Console, AWS CLI, AWS IAM)](1.1-week1/)
@@ -29,14 +28,12 @@ Thông thường và cũng là tiêu chuẩn, một worklog được thực hi�
 
 **Tuần 7:** [Thực hành chuỗi bài Lab, đề xuất dự án cá nhân và tìm hiểu kiến trúc Serverless](1.7-week7/)
 
-**Tuần 8:** [Xây dựng và triển khai dự án Capstone - Serverless Job Application Tracker](1.8-week8/)
+**Tuần 8:** [Chọn đề tài dự án cuối khoá, xác định phạm vi và củng cố kiến thức S3/IAM](1.8-week8/)
 
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
+**Tuần 9:** [Hoàn thành đề cương dự án, thiết kế kiến trúc và tìm hiểu cơ chế S3 Presigned URL](1.9-week9/)
 
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
+**Tuần 10:** [Xây dựng phần backend cốt lõi: Cognito authentication, DynamoDB và API Gateway + Lambda](1.10-week10/)
 
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
+**Tuần 11:** [Hoàn thiện lưu trữ CV (S3 KMS), luồng nhắc lịch tự động (EventBridge + SES + SQS), giám sát và giao diện React](1.11-week11/)
 
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
-
-
+**Tuần 12:** [Triển khai production (Amplify Hosting), Route 53 custom domain, lập bảng chi phí, viết tài liệu và thuyết trình](1.12-week12/)

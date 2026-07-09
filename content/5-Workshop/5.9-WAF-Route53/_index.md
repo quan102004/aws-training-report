@@ -70,13 +70,13 @@ ns-1391.awsdns-45.org
 
 #### Step 4: Point nameservers at the registrar
 
-1. Sign in to your registrar's control panel (Vietnix)
-2. Go to **Domain management** → select the domain → **Nameservers** tab
-3. Choose **Use custom nameservers**
+1. Sign in to your registrar's control panel (name.com)
+2. Go to **Manage** → select the domain → **Nameservers** tab
+3. Choose **Custom**
 4. Remove the default nameservers and paste the **four AWS nameservers** (no trailing dot)
-5. Choose **Change Nameservers**
+5. Choose **Save**
 
-![Vietnix nameservers](/images/5-Workshop/5.9-WAF-Route53/vietnix-ns.png)
+![Name.com nameservers](/images/5-Workshop/5.9-WAF-Route53/name-ns.png)
 
 {{% notice warning %}}
 After changing nameservers, DNS needs to **propagate** — anywhere from 15 minutes to a few hours (occasionally 24–48 hours). Track progress at [dnschecker.org](https://dnschecker.org) — select type **NS**; once results return `awsdns...`, propagation is complete.
@@ -85,7 +85,7 @@ After changing nameservers, DNS needs to **propagate** — anywhere from 15 minu
 #### Step 5: Attach the custom domain to Amplify
 
 1. Go to **Amplify** → your app → **Hosting** → **Custom domains** → **Add domain**
-2. Enter the domain (e.g. `jobtracker-fcj.io.vn`) → **Configure domain**
+2. Enter the domain (e.g. `jobtrackerfcj.dev`) → **Configure domain**
 3. Amplify issues a **free SSL certificate** and displays the DNS records you need to add
 4. If the hosted zone is in the same account, Amplify adds the records to Route 53 automatically; otherwise copy them in manually
 5. You can map both the root domain and the `www` subdomain

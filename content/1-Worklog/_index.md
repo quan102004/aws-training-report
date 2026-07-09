@@ -28,14 +28,12 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 7:** [Completing hands-on Labs, proposing a project, and exploring Serverless architecture](1.7-week7/)
 
-**Week 8:** [Building and deploying the Capstone Project - Serverless Job Application Tracker](1.8-week8/)
+**Week 8:** [Selecting a capstone project topic, defining its scope, and consolidating S3/IAM](1.8-week8/)
 
-**Week 9:** [Doing task I...](1.9-week9/)
+**Week 9:** [Completing the project proposal, system architecture design, and S3 Presigned URL mechanism](1.9-week9/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 10:** [Building core backend: Cognito authentication, DynamoDB database, and API layer](1.10-week10/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 11:** [Finalizing CV storage (S3 KMS), automated reminder pipeline (EventBridge + SES + SQS), monitoring, and React frontend](1.11-week11/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
-
-
+**Week 12:** [Production deployment on Amplify Hosting, Route 53 custom domain, cost estimation, documentation, and final presentation](1.12-week12/)

@@ -19,11 +19,11 @@ pre: " <b> 1.6. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Tìm hiểu về dịch vụ Cơ sở dữ liệu trên AWS                                                                                             | 25/05/2026   | 25/05/2026      |<https://cloudjourney.awsstudygroup.com/> |
-| 2   | - Học về Amazon RDS và Amzon Aurora | 26/05/2026   | 26/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Học về Redshift  - Elasticache | 27/05/2026   | 27/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Làm bài lab 05, lab 43 | 28/05/2026   | 28/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu DynamoDB và một số kiến thức chuyên sâu                                                                                         | 29/05/2026   | 29/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Tìm hiểu về dịch vụ Cơ sở dữ liệu trên AWS                                                                                             | 25/05/2026   | 25/05/2026      |<https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Học về Amazon RDS và Amzon Aurora | 26/05/2026   | 26/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Học về Redshift  - Elasticache | 27/05/2026   | 27/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Làm bài lab 05, lab 43 | 28/05/2026   | 28/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Tìm hiểu DynamoDB và một số kiến thức chuyên sâu                                                                                         | 29/05/2026   | 29/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 6:

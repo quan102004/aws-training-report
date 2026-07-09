@@ -16,11 +16,11 @@ pre: " <b> 1.7. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Làm bài lab 35, lab 39  | 1/06/2026   | 1/06/2026      |<https://cloudjourney.awsstudygroup.com/> |
-| 2   | - Làm bài lab 40, 60 , 72                                            | 2/06/2026   | 2/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Làm bài lab 73| 3/06/2026   | 3/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Lên ý tưởng làm project  <br>                  | 4/06/2026   | 4/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu một vài kiến trúc Serverless trên AWS | 5/06/2026   | 5/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Làm bài lab 35, lab 39  | 1/06/2026   | 1/06/2026      |<https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Làm bài lab 40, 60 , 72                                            | 2/06/2026   | 2/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Làm bài lab 73| 3/06/2026   | 3/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Lên ý tưởng làm project  <br>                  | 4/06/2026   | 4/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Tìm hiểu một vài kiến trúc Serverless trên AWS | 5/06/2026   | 5/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 7:

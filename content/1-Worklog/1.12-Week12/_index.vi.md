@@ -1,58 +1,30 @@
 ---
-title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
-chapter: false
-pre: " <b> 1.12 </b> "
+title : "Worklog Tuần 12 "
+date : "2026-07-06"
+weight : 12
+chapter : false
+pre : " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Triển khai hệ thống lên môi trường production và gắn tên miền riêng.
+- Hoàn thành bảng ước tính chi phí, tài liệu workshop và bài thuyết trình cuối khoá.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Công việc thực hiện trong tuần:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Thử triển khai giao diện qua CloudFront<br>- Chuyển sang AWS Amplify Hosting sau khi distribution bị chặn do tài khoản mới chưa xác minh | 06/07/2026 | 06/07/2026 | |
+| 3 | - Luyện tập và trình bày bài bảo vệ dự án cuối khoá<br>- Trình bày kiến trúc và demo hệ thống đang chạy | 07/07/2026 | 07/07/2026 | |
+| 4 | - Lập bảng ước tính chi phí cho toàn bộ dịch vụ đã sử dụng | 08/07/2026 | 08/07/2026 | |
+| 5 | - Đăng ký tên miền riêng và tạo public hosted zone trên Route 53<br>- Uỷ quyền DNS bằng cách trỏ nameserver của nhà đăng ký về Route 53<br>- Gắn tên miền vào Amplify Hosting và cấp chứng chỉ ACM | 09/07/2026 | 09/07/2026 | |
+| 6 | - Cập nhật danh sách origin được phép trên API Gateway, S3 và Cognito cho tên miền mới<br>- Viết tài liệu workshop và hướng dẫn dọn dẹp tài nguyên | 10/07/2026 | 10/07/2026 | |
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Triển khai thành công ứng dụng qua AWS Amplify Hosting phục vụ hoạt động production ổn định.
+- Cấu hình hosted zone trên Route 53, uỷ quyền tên miền từ nhà đăng ký ngoài và cấp SSL qua ACM thành công.
+- Lập bảng ước tính chi phí chi tiết, xác thực hệ thống nằm hoàn toàn trong gói Free Tier của AWS.
+- Hoàn thành bài thuyết trình bảo vệ dự án cuối khoá, làm rõ các quyết định thiết kế kiến trúc và giải pháp.
+- Viết đầy đủ tài liệu workshop và hướng dẫn dọn dẹp tài nguyên.

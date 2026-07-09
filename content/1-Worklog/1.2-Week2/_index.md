@@ -17,11 +17,11 @@ pre: " <b> 1.2. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                        | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Learn about VPC and basic concepts: CIDR, Subnet, Route Table, IGW, NAT, etc.                                                                                                             | 27/04/2026 | 27/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 2   | - Explore VPC architectures, draw architectural models <br>                                                                                                                                 | 28/04/2026 | 28/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Practice exercises on VPC                                                                                                                                                                 | 29/04/2026 | 29/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Practice on Route 53 and VPC architectures                                                                                                                                                | 30/04/2026 | 30/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Practice: VPC Peering architecture, Transit VPC                                                                                                                                           | 01/05/2026 | 01/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2| - Learn about VPC and basic concepts: CIDR, Subnet, Route Table, IGW, NAT, etc.                                                                                                             | 27/04/2026 | 27/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Explore VPC architectures, draw architectural models <br>                                                                                                                                 | 28/04/2026 | 28/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Practice exercises on VPC                                                                                                                                                                 | 29/04/2026 | 29/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Practice on Route 53 and VPC architectures                                                                                                                                                | 30/04/2026 | 30/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Practice: VPC Peering architecture, Transit VPC                                                                                                                                           | 01/05/2026 | 01/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 2 Achievements:

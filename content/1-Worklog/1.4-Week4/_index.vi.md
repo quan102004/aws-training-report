@@ -16,11 +16,11 @@ pre: " <b> 1.4. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Học về các dịch vụ lưu trữ trên AWS                                                                                                                                                      | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 2   | - Tìm hiểu về Amazon Simple Storage Service (S3) <br>&emsp; + Access Point <br>&emsp; + S3 Static Website & CORS <br>&emsp; + Control Access <br>&emsp; + ...                                                            | 12/05/2026   | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Thực hành bài lab   13 , 14                                                                                                                                                                     | 13/05/2026   | 13/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Thực hành bài lab 25 , 57 | 14/05/2026   | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu các kiến thức bổ sung trong module này  | 15/05/2026   | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Học về các dịch vụ lưu trữ trên AWS                                                                                                                                                      | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu về Amazon Simple Storage Service (S3) <br>&emsp; + Access Point <br>&emsp; + S3 Static Website & CORS <br>&emsp; + Control Access <br>&emsp; + ...                                                            | 12/05/2026   | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Thực hành bài lab   13 , 14                                                                                                                                                                     | 13/05/2026   | 13/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Thực hành bài lab 25 , 57 | 14/05/2026   | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Tìm hiểu các kiến thức bổ sung trong module này  | 15/05/2026   | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 4:

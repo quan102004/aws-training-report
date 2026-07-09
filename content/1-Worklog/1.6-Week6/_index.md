@@ -18,11 +18,11 @@ pre: " <b> 1.6. </b> "
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Learn about database services on AWS | 25/05/2026 | 25/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 2 | - Learn about Amazon RDS and Amazon Aurora | 26/05/2026 | 26/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Learn about Redshift and ElastiCache | 27/05/2026 | 27/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Complete Lab 05 and Lab 43 | 28/05/2026 | 28/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Learn about DynamoDB and advanced database concepts | 29/05/2026 | 29/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Learn about database services on AWS | 25/05/2026 | 25/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Learn about Amazon RDS and Amazon Aurora | 26/05/2026 | 26/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Learn about Redshift and ElastiCache | 27/05/2026 | 27/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Complete Lab 05 and Lab 43 | 28/05/2026 | 28/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Learn about DynamoDB and advanced database concepts | 29/05/2026 | 29/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 6 Achievements:

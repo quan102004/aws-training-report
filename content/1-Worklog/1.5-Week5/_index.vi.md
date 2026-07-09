@@ -16,11 +16,11 @@ pre: " <b> 1.5. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Học về dịch vụ bảo mật trên AWS                                                                                             | 18/05/2026   | 18/05/2026      |<https://cloudjourney.awsstudygroup.com/> 
-| 2   | - Tìm hiểu về Amazon Identity and access management                                            | 19/05/2026   | 19/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Học về Cognito , AWS Organization , AWS Identity Center , Amazon Key Management Service , AWS Security Hub | 20/05/2026   | 20/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Thực hành bài lab 18, lab 22, lab 27, lab 28 | 21/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - **Thực hành:** lab 33, lab 44, lab 48 và tìm hiểu một số kiến thức chuyên sâu                                                                                   | 22/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Học về dịch vụ bảo mật trên AWS                                                                                             | 18/05/2026   | 18/05/2026      |<https://cloudjourney.awsstudygroup.com/> 
+| 3 | - Tìm hiểu về Amazon Identity and access management                                            | 19/05/2026   | 19/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Học về Cognito , AWS Organization , AWS Identity Center , Amazon Key Management Service , AWS Security Hub | 20/05/2026   | 20/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Thực hành bài lab 18, lab 22, lab 27, lab 28 | 21/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Thực hành:** lab 33, lab 44, lab 48 và tìm hiểu một số kiến thức chuyên sâu                                                                                   | 22/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 5:

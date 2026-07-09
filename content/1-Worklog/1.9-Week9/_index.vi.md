@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 1.9. </b> "
+title : "Worklog Tuần 9"
+date : "2026-06-15"
+weight : 9
+chapter : false
+pre : " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Hoàn thành đề cương dự án và đưa kiến trúc vào rà soát.
+- Tìm hiểu cơ chế presigned URL của S3 dùng cho việc tải lên và tải xuống CV.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Công việc thực hiện trong tuần:
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu presigned URL của S3: cách sinh, thời hạn và cơ chế phân quyền | 15/06/2026 | 15/06/2026 | |
+| 3 | - **Thực hành:** sinh presigned URL bằng AWS SDK for JavaScript v3<br>- Cấu hình CORS cho bucket để trình duyệt tải tệp lên | 16/06/2026 | 16/06/2026 | |
+| 4 | - Viết đề cương dự án: mục tiêu, phạm vi, kiến trúc, danh sách dịch vụ | 17/06/2026 | 17/06/2026 | |
+| 5 | - Gửi kiến trúc để rà soát nội bộ<br>- Nhận góp ý: thiếu IaC, bảng chi phí, dead-letter queue và presigned URL | 18/06/2026 | 18/06/2026 | |
+| 6 | - Chỉnh sửa kiến trúc theo góp ý<br>- Vẽ lại sơ đồ và kiểm tra lại toàn bộ luồng dữ liệu | 19/06/2026 | 19/06/2026 | |
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu được cách presigned URL cho phép trình duyệt làm việc trực tiếp với S3, tệp CV không cần đi qua Lambda.
+- Rút ra rằng request `PUT` bằng presigned URL phải được gửi **không kèm** header `Authorization`, vì chữ ký đã nằm sẵn trong URL.
+- Hoàn thành đề cương dự án.
+- Nhận điểm rà soát khoảng 7.5/10, kèm các thiếu sót cụ thể: chưa có Infrastructure as Code, chưa có bảng ước tính chi phí, chưa có DLQ và chưa thiết kế presigned URL.
+- Chỉnh sửa kiến trúc để mỗi thiếu sót được nêu trong buổi rà soát đều có thành phần tương ứng.

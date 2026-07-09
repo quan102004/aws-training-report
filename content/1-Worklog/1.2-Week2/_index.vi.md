@@ -16,11 +16,11 @@ pre: " <b> 1.2. </b> "
 
 | Thứ | Công việc                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | --------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Học về VPC , các khái niệm cơ bản: CIDR, Subnet, Route Table, IGW, NAT... | 27/04/2026   | 27/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 2   | - Tìm hiểu các kiến trúc của VPC, vẽ các mô hình kiến trúc <br>             | 28/04/2026   | 28/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Thực hành bài tập về VPC                                                  | 29/04/2026   | 29/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Thực hành kiến trúc Route 53, VPC                                         | 30/04/2026   | 30/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Thực hành: Kiến trúc VPC pearing, transit VPC                             | 01/05/2026   | 01/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Học về VPC , các khái niệm cơ bản: CIDR, Subnet, Route Table, IGW, NAT... | 27/04/2026   | 27/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu các kiến trúc của VPC, vẽ các mô hình kiến trúc <br>             | 28/04/2026   | 28/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Thực hành bài tập về VPC                                                  | 29/04/2026   | 29/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Thực hành kiến trúc Route 53, VPC                                         | 30/04/2026   | 30/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Thực hành: Kiến trúc VPC pearing, transit VPC                             | 01/05/2026   | 01/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 2:
 

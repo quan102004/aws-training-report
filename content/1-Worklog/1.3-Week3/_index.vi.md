@@ -17,11 +17,11 @@ pre: " <b> 1.3. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Học module 3 Dịch vụ compute vm trên AWS                                                                                            | 04/05/2026   | 04/05/2026      |<https://cloudjourney.awsstudygroup.com/> |
-| 2   | - Tìm hiểu sâu về Amazon Elastic Compute (EC2) <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp;  <br>                                                                 | 08/05/2026   | 08/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Tìm hiểu về Elastic block store  | 09/05/2026   | 09/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Thực hành về Deploy AWS Backup to the System | 10/05/2026   | 10/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5  | - **Thực hành:** <br>&emsp; + Lab 24 <br>&emsp; + Lab 57                                                                                       | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - Học module 3 Dịch vụ compute vm trên AWS                                                                                            | 04/05/2026   | 04/05/2026      |<https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu sâu về Amazon Elastic Compute (EC2) <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp;  <br>                                                                 | 08/05/2026   | 08/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Tìm hiểu về Elastic block store  | 09/05/2026   | 09/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Thực hành về Deploy AWS Backup to the System | 10/05/2026   | 10/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Thực hành:** <br>&emsp; + Lab 24 <br>&emsp; + Lab 57                                                                                       | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 3:
