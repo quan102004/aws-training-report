@@ -1,126 +1,41 @@
 ---
-title: "Blog 3"
-date: 2024-01-01
-weight: 1
+title: "Blog 3: Real-Time Analytics with Amazon Aurora & QuickSight"
+date: 2026-06-29
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+### [DATA/Architecture] Data Segregation for Real-Time Analytics: Lessons from Oldcastle with Amazon Aurora & QuickSight
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+Hello community members,
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+In manufacturing or logistics enterprises, operational data changes by the second. Extracting data from core ERP systems onto real-time dashboards without overloading or slowing down the production environment is always a headache in cloud architecture design.
 
----
+A highly typical case study that fully addresses this issue, recently shared by AWS, is **Oldcastle APG** – a major building materials supplier in North America with over 150 facilities. When migrating their on-premises systems to Infor Cloud ERP on AWS, they encountered a major hurdle: the built-in reporting capabilities of Infor Cloud ERP only supported a very limited number of reports. Users across different departments had to wait for batch reports, causing serious delays in decision-making.
 
-## Architecture Guidance
+Instead of pointing BI tools directly at the production ERP database, Oldcastle chose a more optimized approach: **building an architecture that completely segregates data using Infor Data Fabric Stream Pipelines and AWS services.**
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
+#### Battle-Tested Data Streaming Architecture
+The idea here is to capture change data and push it out immediately. The processing flow is highly optimized:
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
+* **Ingestion:** Infor Data Fabric streams modifications (insert, update, delete) immediately without waiting to save them to a data lake.
+* **Handling Networking (Load Distribution):** Since the Infor system could not directly access the private VPC, they had to use a Network Load Balancer (NLB) with static Elastic IPs placed in a public subnet. Behind it, EC2 instances acting as RDS Routers used `iptables NAT rules` to securely forward traffic to the database located in the private subnet.
+* **Connection Management:** With high-frequency data streaming, they deployed **Amazon RDS Proxy** between the router and database to manage the connection pool, absorb traffic spikes, and handle automatic failovers.
+* **Flexible Storage:** Data lands in **Amazon Aurora PostgreSQL** (Multi-AZ deployment). A great technical choice here was storing the streaming data flow into `JSONB` columns for flexible queries, leveraging Aurora's native JSON functions when parsing is required.
 
-**The solution architecture is now as follows:**
+#### Delivering Dashboards to Users' Fingertips
+Once analyzed, the data needs to be displayed smoothly. **Amazon QuickSight** was chosen and leveraged SPICE in-memory engine to accelerate query speeds.
 
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+But the highlight is the **Embedded Integration** mechanism. Instead of forcing users to open a separate BI (Business Intelligence) link, they used Amazon API Gateway and AWS Lambda for authentication, then invoked the QuickSight API to generate dynamic URLs (complete with Row-Level Security configuration). As a result, these dashboards were embedded directly into the users' familiar Infor OS interface using `iframes`.
 
----
+#### Impressive Real-World Results
+* In just 8 months, they successfully deployed over **50 dashboards** and complex reports.
+* The system supports over **100 concurrent users** and handles millions of transactions daily with no performance degradation.
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
-
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+> This is a textbook architecture pattern for anyone working with Cloud ERP, Data Analytics, or System Integration. Decoupling the analytical layer from the transactional (OLTP) system not only offloads processing from the ERP but also paves the way for advanced AI/ML capabilities in the future.
 
 ---
-
-## Technology Choices and Communication Scope
-
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
-
----
-
-## The Pub/Sub Hub
-
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
-
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
-
----
-
-## Core Microservice
-
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
-
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
-
----
-
-## Front Door Microservice
-
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
-
----
-
-## Staging ER7 Microservice
-
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
-
----
-
-## New Features in the Solution
-
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+**References:**
+* **Link to original post:** [Real-time analytics with Infor Cloud ERP and AWS services](https://aws.amazon.com/blogs/architecture/real-time-analytics-with-infor-cloud-erp-and-aws-services/)
+* **Link to group post:** [Cộng đồng AWS Study Group FCAJ](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2206817163416577)

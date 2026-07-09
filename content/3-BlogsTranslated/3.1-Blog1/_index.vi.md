@@ -1,126 +1,55 @@
 ---
-title: "Blog 1"
-date: 2024-01-01
+title: "Blog 1: Tư duy hạ tầng 'miễn nhiễm' với Ransomware trên AWS"
+date: 2026-06-15
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+### [SECURITY/Architecture] Đừng để Cloud thành điểm mù: Tư duy hạ tầng "miễn nhiễm" với Ransomware trên AWS
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+Chào các anh chị và các bạn trong nhóm FCAJ.
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+Trong quá trình tìm hiểu về thiết kế kiến trúc hệ thống bảo mật trên AWS, em có đọc được một tài liệu kiến trúc rất chi tiết và thiết thực. Em xin phép tổng hợp và phân tích lại các điểm kỹ thuật trọng tâm của kiến trúc này để mọi người cùng tham khảo và thảo luận.
 
----
+Khi đối mặt với các sự cố bảo mật lớn đặc biệt là các chiến dịch Ransomware có tổ chức, chúng ta thường thấy một kịch bản quen thuộc: Hacker không ngay lập tức mã hóa dữ liệu. Chúng sẽ nằm vùng, dò quét mạng (scanning), tìm cách leo thang đặc quyền, và sau đó tẩu tán dữ liệu ra ngoài trước khi "sập bẫy".
 
-## Hướng dẫn kiến trúc
+Trong khung thời gian vàng 72 giờ đầu tiên của chiến lược khoanh vùng và ngăn chặn (containment strategy), nếu kiến trúc mạng và phân quyền của bạn được thiết kế dạng "phẳng", mã độc sẽ lây lan theo chiều ngang cực kỳ nhanh chóng.
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+Mình vừa đọc một bài chia sẻ rất đáng suy ngẫm từ AWS Architecture Blog về chủ đề "Let’s Architect! Architecting for Security". Thay vì liệt kê tool, bài viết mang đến một tư duy phòng thủ từ cốt lõi: Dùng chính kiến trúc Cloud để tự động bẻ gãy chuỗi tấn công.
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+Dưới đây là 4 "chốt chặn" sinh tử giúp giới hạn thiệt hại khi hệ thống lỡ bị chọc thủng:
 
-**Kiến trúc giải pháp bây giờ như sau:**
+#### 1. Bẻ gãy chuỗi leo thang đặc quyền với Temporary Access
+* **Vấn đề:** Thông thường, khi xử lý sự cố hoặc quản trị hệ thống, Dev thường được cấp các IAM Role dài hạn. Hacker chỉ cần nhắm vào các credential bị rò rỉ này là có thể ung dung chiếm quyền.
+* **Giải pháp:** Chuyển sang mô hình truy cập đặc quyền tạm thời (Temporary Elevated Access). Khi cần can thiệp hệ thống, nhân sự sẽ yêu cầu cấp quyền theo thời gian thực (ví dụ: chỉ sống trong 1-2 tiếng). Kẻ tấn công dẫu có lấy được thông tin đăng nhập cũng "bó tay" vì không có đặc quyền nào được gắn tĩnh, dập tắt ngay ý định leo thang.
 
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+#### 2. Cô lập luồng mạng và chặn C&C Callbacks bằng VPC Endpoints
+* **Vấn đề:** Đây là lỗi cấu hình hạ tầng mạng rất hay gặp. Nhiều hệ thống đặt EC2 hoặc Lambda trong Private Subnet nhưng lại mặc định định tuyến (route) toàn bộ traffic ra internet thông qua NAT Gateway để kết nối tới các dịch vụ như DynamoDB hay S3. Đường ra internet mở toang tạo cơ hội cho mã độc gọi về máy chủ C&C (Command & Control) hoặc tuồn dữ liệu nhạy cảm ra ngoài.
+* **Giải pháp:** Triển khai VPC Gateway Endpoints. Dữ liệu lúc này sẽ đi qua mạng nội bộ khép kín của AWS thay vì vòng qua NAT Gateway. Khi kết hợp với việc phân tích VPC Flow Logs, bất kỳ lưu lượng bất thường nào (như các gói tin dò quét Nmap hay hành vi brute-force SSH rình rập) đều sẽ bị phơi bày và chặn đứng ở ngay tầng Network.
 
----
+#### 3. Chặn mã độc từ trong trứng nước với "Shift Left"
+* **Vấn đề:** Bảo mật không phải là rào chắn ở cuối đường để chặn code lại. Thay vì đợi đến khi hệ thống chạy thực tế mới tiến hành pentest, hãy đưa các quy trình rà quét (scan lỗ hổng, dò mật khẩu hardcode) vào ngay pipeline CI/CD.
+* **Giải pháp:** Tư duy "Shift Left" giúp team phát hiện lỗ hổng tiêm nhiễm (injection) hoặc thư viện chứa mã độc ngay từ lúc mã nguồn mới được push lên, ngăn chặn rủi ro trước cả khi chúng kịp chạm vào môi trường Cloud.
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
-
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+#### 4. Khả năng giám sát toàn cục với AWS SRA
+* **Vấn đề:** Khi sự cố nổ ra trên một hệ thống chạy hàng chục tài khoản AWS khác nhau, việc mò mẫm log ở từng nơi là một cơn ác mộng làm lãng phí thời gian phản ứng.
+* **Giải pháp:** AWS Security Reference Architecture (SRA) cung cấp một bản thiết kế mẫu để quy hoạch toàn bộ dữ liệu từ GuardDuty, Security Hub hay Macie về một trung tâm quản lý đồng nhất. Cảnh báo nổ ở đâu, Blue Team thấy ngay ở đó.
 
 ---
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
+### Kết luận & Hành động thực tiễn
 
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Bảo mật trên Cloud không đơn thuần là chạy đua vũ trang bằng các công cụ đắt tiền, mà bắt nguồn từ chính tư duy thiết kế hạ tầng mạng. Để biến hệ thống thành những "vách ngăn chống cháy" chặn đứng chuỗi lây lan của Ransomware, thay vì chờ đợi sự cố xảy ra, mọi người hãy bắt tay vào rà soát lại kiến trúc hiện tại thông qua các bước sau:
 
----
+* **Đóng băng đặc quyền tĩnh:** Thu hồi ngay các IAM Role dài hạn cấp cho nhân sự và chuyển sang cơ chế cấp quyền tạm thời (Temporary Elevated Access) theo phiên làm việc.
+* **Chặn đường lùi của mã độc:** Rà soát lại Route Table, sử dụng VPC Endpoints thay cho NAT Gateway khi giao tiếp với các dịch vụ nội bộ (như S3 hay DynamoDB) để tránh việc vô tình mở đường ra Internet cho C&C Server.
+* **Quét mã độc từ trong nôi:** Tích hợp ngay các công cụ dò quét lỗ hổng và kiểm tra hardcode secret vào thẳng pipeline CI/CD (Shift-Left) trước khi deploy lên Cloud.
+* **Tập trung hóa tầm nhìn:** Áp dụng ngay mô hình AWS SRA để gom toàn bộ cảnh báo bảo mật từ các tài khoản con về một trung tâm giám sát duy nhất, giúp đội ngũ vận hành phản ứng trong "thời gian thực" khi có biến. 
 
-## The pub/sub hub
-
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
-
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+> Một kiến trúc được quy hoạch "kín kẽ" từ đầu chính là vũ khí phòng thủ mạnh mẽ nhất, làm nản lòng tin tặc và tối thiểu hóa thiệt hại khi hệ thống lỡ bị chọc thủng!
 
 ---
-
-## Core microservice
-
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
-
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
-
----
-
-## Front door microservice
-
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
-
----
-
-## Staging ER7 microservice
-
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
-
----
-
-## Tính năng mới trong giải pháp
-
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+**Nguồn tham khảo:**
+* **Link bài đăng trên group:** [Cộng đồng AWS Study Group](https://www.facebook.com/groups/660548818043427?multi_permalinks=2195119847919642)
+* **Link bài gốc cho anh em tham khảo chi tiết:** [Let’s Architect! Architecting for Security](https://aws.amazon.com/blogs/architecture/lets-architect-architecting-for-security/)
