@@ -124,8 +124,8 @@ Mặc định, các ứng dụng như Amazon Q kết nối qua internet công c�
 
 ### 6. Hình ảnh từ sự kiện
 
-![Hình ảnh tại Event 3](/images/4-Event/4.3-Event3/event3-photo.png)
-![Hình ảnh tại Event 3](/images/4-Event/4.2-Event2/event2-photo.png)
+![Hình ảnh tại Event 3](/images/4-Event/4.3-event3/event3-photo.png)
+![Hình ảnh tại Event 3](/images/4-Event/4.3-event3/event3-photo2.png)
 
 ---
 

@@ -124,8 +124,8 @@ By default, applications like Amazon Q connect through the public internet. Open
 
 ### 6. Photo from the Event
 
-![Photo from Event 3](/images/4-Event/4.3-Event3/event3-photo.png)
-![Photo from Event 3](/images/4-Event/4.3-Event3/event3-photo2.png)
+![Photo from Event 3](/images/4-Event/4.3-event3/event3-photo.png)
+![Photo from Event 3](/images/4-Event/4.3-event3/event3-photo2.png)
 
 ---
 
