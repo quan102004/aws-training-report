@@ -17,6 +17,8 @@ Many systems today resort to creating separate Knowledge Bases for each departme
 Recently, while researching cloud networking architectures and data security patterns, I wanted to introduce an approach that completely resolves this bottleneck. Instead of physical segregation, we can use a single unified Knowledge Base and control access by combining **Amazon Bedrock** and **Amazon Verified Permissions**.
 
 #### Defense-in-Depth Security Architecture
+
+![Multi-Tenant RAG Security Architecture](/images/3-Blog/blog_2.jpg)
 The core concept of this architecture is to completely decouple authorization logic from the application source code and apply security automation at two independent layers:
 
 * **1. Layer 1 (API Access) - Edge Gatekeeping:** When a user sends a request, it does not query the database directly. Amazon API Gateway invokes a Lambda Authorizer to check with Verified Permissions whether the user (based on groups in their JWT token) is authorized to call the API. If invalid, the request is rejected immediately, reducing the risk of direct attacks.

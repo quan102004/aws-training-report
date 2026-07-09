@@ -17,6 +17,8 @@ A highly typical case study that fully addresses this issue, recently shared by 
 Instead of pointing BI tools directly at the production ERP database, Oldcastle chose a more optimized approach: **building an architecture that completely segregates data using Infor Data Fabric Stream Pipelines and AWS services.**
 
 #### Battle-Tested Data Streaming Architecture
+
+![Real-Time Analytics Architecture with Amazon Aurora & QuickSight](/images/3-Blog/blog_3.jpg)
 The idea here is to capture change data and push it out immediately. The processing flow is highly optimized:
 
 * **Ingestion:** Infor Data Fabric streams modifications (insert, update, delete) immediately without waiting to save them to a data lake.

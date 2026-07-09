@@ -18,6 +18,8 @@ Trong khung thời gian vàng 72 giờ đầu tiên của chiến lược khoanh
 
 Mình vừa đọc một bài chia sẻ rất đáng suy ngẫm từ AWS Architecture Blog về chủ đề "Let’s Architect! Architecting for Security". Thay vì liệt kê tool, bài viết mang đến một tư duy phòng thủ từ cốt lõi: Dùng chính kiến trúc Cloud để tự động bẻ gãy chuỗi tấn công.
 
+![Kiến trúc bảo mật chống Ransomware trên AWS](/images/3-Blog/blog_1.jpg)
+
 Dưới đây là 4 "chốt chặn" sinh tử giúp giới hạn thiệt hại khi hệ thống lỡ bị chọc thủng:
 
 #### 1. Bẻ gãy chuỗi leo thang đặc quyền với Temporary Access

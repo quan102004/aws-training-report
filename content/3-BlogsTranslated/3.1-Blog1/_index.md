@@ -18,6 +18,8 @@ During the golden 72-hour window of a containment strategy, if your network arch
 
 I have just read a thought-provoking post from the AWS Architecture Blog on the topic of "Let’s Architect! Architecting for Security". Instead of listing tools, the article brings a defense-in-depth mindset: using the cloud architecture itself to break the attack chain automatically.
 
+![Ransomware-Resilient Architecture on AWS](/images/3-Blog/blog_1.jpg)
+
 Below are 4 critical checkpoints that help limit the damage if the system is breached:
 
 #### 1. Breaking the Privilege Escalation Chain with Temporary Access

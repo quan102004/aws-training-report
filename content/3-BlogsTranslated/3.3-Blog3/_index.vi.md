@@ -17,6 +17,8 @@ Một case study cực kỳ điển hình giải quyết trọn vẹn bài toán
 Thay vì chọc thẳng các công cụ BI vào ERP, Oldcastle đã chọn một hướng đi tối ưu hơn: **Xây dựng kiến trúc tách bạch hoàn toàn dữ liệu bằng Infor Data Fabric Stream Pipelines và các dịch vụ AWS.**
 
 #### Kiến Trúc Data Streaming Thực Chiến Mượt Mà
+
+![Kiến trúc phân tích thời gian thực với Amazon Aurora & QuickSight](/images/3-Blog/blog_3.jpg)
 Ý tưởng ở đây là bắt (capture) dữ liệu thay đổi và đẩy ra ngoài ngay lập tức. Luồng xử lý cực kỳ chặt chẽ:
 
 * **Bắt sự kiện (Ingestion):** Infor Data Fabric stream các thay đổi (insert, update, delete) ngay lập tức mà không cần đợi lưu vào data lake.

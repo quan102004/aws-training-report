@@ -17,6 +17,8 @@ Nhiều hệ thống hiện nay phải chọn cách tạo ra các Knowledge Base
 Gần đây, khi nghiên cứu các mẫu kiến trúc mạng đám mây và bảo mật dữ liệu, mình muốn giới thiệu với mọi người một hướng tiếp cận giúp giải quyết triệt để nút thắt này. Thay vì chia cắt vật lý, chúng ta có thể sử dụng một Knowledge Base duy nhất và kiểm soát quyền truy cập bằng sự kết hợp giữa **Amazon Bedrock** và **Amazon Verified Permissions**.
 
 #### Kiến Trúc Bảo Mật Đa Lớp (Defense-in-Depth)
+
+![Kiến trúc bảo mật RAG đa người dùng](/images/3-Blog/blog_2.jpg)
 Ý tưởng cốt lõi của mẫu kiến trúc này là tách biệt hoàn toàn logic ủy quyền ra khỏi mã nguồn ứng dụng và áp dụng tự động hóa bảo mật ở hai tầng độc lập:
 
 * **1. Tầng 1 (API Access) - Chặn ngay từ cửa:** Khi người dùng gửi request, hệ thống không đi thẳng vào database. Amazon API Gateway sẽ gọi một Lambda Authorizer để kiểm tra với Verified Permissions xem người dùng này (dựa trên nhóm trong JWT token) có quyền gọi API hay không. Nếu không hợp lệ, request bị từ chối ngay lập tức, giảm thiểu rủi ro bị tấn công trực diện.
