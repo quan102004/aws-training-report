@@ -5,40 +5,21 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+## Đánh giá chung
 
-### Đánh giá chung
+Sau **12 tuần thực tập tại Amazon Web Services (AWS) Vietnam** (từ ngày **20/04/2026** đến **12/07/2026**), tôi nhận thấy đây là một trong những cột mốc ý nghĩa nhất trên hành trình học tập của mình. Chương trình thực tập không chỉ cung cấp cho tôi cơ hội cọ xát thực tế để lấp đầy khoảng cách giữa lý thuyết trên giảng đường và nhu cầu thực tế của doanh nghiệp, mà còn mở rộng thế giới quan của tôi về quy trình và tiêu chuẩn làm việc trong một tập đoàn công nghệ hàng đầu thế giới.
 
-**1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+Điểm sáng lớn nhất của chương trình thực tập là mô hình đào tạo kết hợp chặt chẽ giữa việc tự học có định hướng và thực hành thực tế qua dự án **Job Tracker Platform**. Việc được trực tiếp nghiên cứu và xây dựng một giải pháp Serverless từ đầu, tự giải quyết các bài toán về bảo mật (Cognito, WAF, KMS), tự động hóa (EventBridge, SQS, SES) cho đến giám sát hệ thống (CloudWatch, CloudTrail) đã giúp tôi hình thành tư duy hệ thống và cách tiếp cận giải quyết vấn đề một cách bài bản.
 
-**2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+Bên cạnh đó, môi trường làm việc cởi mở, khuyến khích sự chủ động và tôn trọng sự khác biệt tại AWS Vietnam đã tạo động lực rất lớn cho tôi. Tôi không chỉ học cách viết mã nguồn hay cấu hình dịch vụ, mà còn học được cách trình bày ý tưởng kỹ thuật một cách ngắn gọn, cách tiếp nhận và phản hồi ý kiến đóng góp từ các anh chị hướng dẫn, cũng như cách làm việc có kế hoạch và kỷ luật.
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+## Đề xuất & mong muốn
 
-**4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+Từ trải nghiệm thực tế trong kỳ thực tập, tôi xin đề xuất một số ý kiến nhằm góp phần hoàn thiện chương trình thực tập cho các khóa tiếp theo:
 
-**5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+1. **Bổ sung các chuyên đề thực hành nâng cao**: Chương trình có thể mở rộng thêm các buổi Seminar hoặc Lab hướng dẫn về **DevOps (CI/CD nâng cao)**, **Containerization (Docker, Amazon EKS/ECS)**, và **Infrastructure as Code (IaC)**. Đây đều là những kỹ năng vô cùng thực tế mà thị trường đang tìm kiếm.
+2. **Tăng cường kết nối với chuyên gia**: Việc tổ chức định kỳ các buổi giao lưu ngắn (Tech Talk) với các **Solutions Architect**, **Technical Account Manager (TAM)** hay **Security Specialist** của AWS sẽ giúp sinh viên có cái nhìn sâu sắc hơn về các dự án thực tế quy mô lớn và định hình rõ ràng hơn về lộ trình phát triển sự nghiệp.
+3. **Định hướng và hỗ trợ thi chứng chỉ**: Mong muốn chương trình tiếp tục hỗ trợ sinh viên tiếp cận các tài liệu chính thống để chuẩn bị cho các chứng chỉ AWS quốc tế (như Cloud Practitioner, Solutions Architect Associate), giúp sinh viên tự tin và có lợi thế cạnh tranh hơn sau khi tốt nghiệp.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
-
-
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
-
-
-### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+Về định hướng cá nhân, kỳ thực tập tại AWS Vietnam đã củng cố niềm đam mê của tôi đối với lĩnh vực **Cloud Security** và **Fullstack Developer**. Trong thời gian tới, tôi sẽ tiếp tục tối ưu hóa dự án cá nhân, nghiên cứu các mô hình bảo mật nâng cao trên Cloud và chuẩn bị cho các chứng chỉ chuyên nghiệp của AWS. Tôi tin rằng những hành trang quý báu tích lũy được trong 12 tuần vừa qua sẽ là nền tảng vững chắc giúp tôi tự tin bước vào môi trường làm việc thực tế sau này.
