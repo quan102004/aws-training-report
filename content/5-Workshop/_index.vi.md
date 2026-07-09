@@ -1,29 +1,18 @@
 ---
-title: "Workshop"
-date: "2026-07-06"
-weight: 5
-chapter: false
-pre: " <b> 5. </b> "
+title : "Workshop"
+date : "2026-07-07"
+weight : 5
+chapter : false
+pre : " <b> 5. </b> "
 ---
 
 # Serverless Job Application Tracker
 
 #### Tổng quan
 
-Đề tài capstone của nhóm là xây dựng **Serverless Job Application Tracker** — hệ thống hỗ trợ người dùng quản lý và theo dõi quá trình ứng tuyển việc làm, triển khai hoàn toàn theo kiến trúc serverless trên AWS, region **ap-southeast-1 (Singapore)**.
+Workshop hướng dẫn xây dựng một ứng dụng web **hoàn toàn serverless** trên AWS: hệ thống quản lý và theo dõi quá trình ứng tuyển việc làm, có xác thực người dùng, lưu trữ CV an toàn, tự động gửi email nhắc nhở, giám sát vận hành và audit đầy đủ.
 
-Chức năng chính:
-
-- Tạo, theo dõi và cập nhật trạng thái từng đơn ứng tuyển (Đã nộp / Phỏng vấn / Offer / Từ chối)
-- Đính kèm CV (PDF) cho mỗi đơn, upload/download **trực tiếp với S3 qua Presigned URL**
-- **Tự động gửi email nhắc nhở** khi đơn đến hạn follow-up (cron 9:00 sáng hằng ngày)
-- Giám sát vận hành (CloudWatch Alarm → SNS) và audit toàn bộ API call (CloudTrail)
-
-#### Kiến trúc
-
-![Architecture Diagram](/images/capstone/architecture-v6.png)
-
-Hệ thống gồm 10 luồng chính, được đánh số trên sơ đồ và trình bày chi tiết trong từng mục con.
+Sau workshop, bạn sẽ nắm được cách kết hợp Cognito, API Gateway, Lambda, DynamoDB, S3, KMS, Amplify, WAF, Route 53, EventBridge, SES, SQS, CloudWatch và CloudTrail thành một hệ thống hoàn chỉnh — với chi phí thực tế dưới $1 trong toàn bộ quá trình phát triển.
 
 #### Nội dung
 

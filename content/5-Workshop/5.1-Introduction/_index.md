@@ -1,42 +1,56 @@
 ---
-title : "Introduction & Architecture"
-date : "2026-07-06"
+title : "Introduction"
+date : "2026-07-07"
 weight : 1
 chapter : false
 pre : " <b> 5.1 </b> "
 ---
 
+#### Serverless architecture
+
+- **Serverless** is a model for building applications where developers never manage servers. AWS provisions, scales and patches the underlying infrastructure.
+- Serverless services such as **AWS Lambda**, **Amazon DynamoDB**, **Amazon S3** and **Amazon API Gateway** bill by actual usage — there is no charge for idle resources.
+- **Amazon Cognito** handles user authentication and issues **JWT tokens**, letting API Gateway verify the caller's identity without any custom auth logic.
+
 #### The problem
 
-Job seekers often submit dozens of applications at once and easily miss the right time to follow up with recruiters. We built a web application to manage all applications in one place, store a CV per application, and send automatic email reminders.
+Job seekers often submit dozens of applications at once, easily forget when to follow up with recruiters, and struggle to track which CV was sent to which company.
 
-#### Why serverless?
+**The solution:** a web application that centralizes all job applications, attaches a dedicated CV to each one, and automatically emails a reminder when a follow-up is due.
 
-- **No servers to manage**: everything runs on managed services (Lambda, DynamoDB, S3, Cognito...)
-- **Scales automatically** with the number of users
-- **Pay-per-use pricing** — ideal for the early stage. Actual cost during the whole development process: **$0.85** (see the Cost section)
+#### Workshop overview
 
-#### Architecture diagram
+In this workshop you will build a system with two parts:
 
-![Architecture Diagram](/images/capstone/architecture-v6.png)
+- **Frontend** — a React application (Vite + TypeScript + Tailwind) built and delivered through **AWS Amplify Hosting** with a global CDN, automatic HTTPS and CI/CD from GitHub. **AWS WAF** filters malicious traffic at the edge, and **Amazon Route 53** manages DNS for the custom domain.
 
-**The 10 main flows:**
+- **Backend** — entirely serverless in the **ap-southeast-1 (Singapore)** region: Cognito authenticates users, API Gateway (HTTP API) serves as the entry point with a JWT authorizer, four Lambda functions handle the logic, DynamoDB stores job data, and S3 with KMS stores encrypted CVs. EventBridge triggers a Lambda each morning to scan for due jobs and send emails through SES, with failures routed to an SQS Dead Letter Queue. A CloudWatch Alarm notifies the admin via SNS, and CloudTrail writes audit logs to S3.
+
+![System architecture](/images/5-Workshop/5.1-Introduction/architecture.png)
+
+#### Application flows
 
 | # | Flow | Services |
 |---|------|----------|
-| 1a–1b | Access the domain, check WAF rules | Route 53, CloudFront, AWS WAF |
-| 2 | Load the React UI (origin fetch) | CloudFront ↔ S3 Static Website |
-| 3 | Sign in / receive JWT | Amazon Cognito |
-| 4a–4b | Call the API with JWT, validate token | CloudFront → API Gateway ↔ Cognito |
-| 5 | Route requests to the right Lambda | API Gateway → 3 Lambdas |
-| 6 | Read / write job data | Lambda ↔ DynamoDB (+GSI) |
-| 7a–7b | Issue Presigned URL, upload/download CV directly | Lambda, S3 Private, KMS |
-| 8a–8d | 9:00 AM cron scans due jobs, sends reminder emails | EventBridge → Lambda → SES (+SQS DLQ) |
-| 9a–9d | Collect logs, alert admin when thresholds are breached | CloudWatch Alarm → SNS → Email |
-| 10a–10b | Record every API call for auditing | CloudTrail → S3 |
+| 1 | Domain access, edge filtering of malicious traffic | Route 53, AWS WAF |
+| 2 | Serve the React UI over CDN + HTTPS | AWS Amplify Hosting |
+| 3 | Sign in, receive a JWT | Amazon Cognito |
+| 4 | Validate the token, route the request | API Gateway (HTTP API) |
+| 5 | Business logic | AWS Lambda |
+| 6 | Job data storage | Amazon DynamoDB (+GSI) |
+| 7 | CV storage via Presigned URLs | Amazon S3 + AWS KMS |
+| 8 | Daily automatic reminders | EventBridge + SES + SQS DLQ |
+| 9 | Monitoring and admin alerts | CloudWatch Alarm + SNS |
+| 10 | Audit logging | AWS CloudTrail + S3 |
 
-#### Design highlights
+#### Design principles
 
-- **No VPC**: a purely serverless architecture — every component is a managed service protected by IAM, WAF and KMS, reducing complexity and cost.
-- **No DynamoDB Scan anywhere**: user queries go through the `userId` partition key; the reminder flow queries the `FollowUpIndex` GSI.
-- **Strict data isolation**: `userId` comes from the JWT validated by API Gateway; users can never read or modify other users' data.
+{{% notice info %}}
+**No VPC** — a purely serverless architecture where every component is a managed service protected by IAM, WAF and KMS. This reduces complexity and eliminates NAT Gateway costs (~$32/month).
+
+**No DynamoDB Scans** — every query uses the `userId` partition key or a GSI, keeping performance and cost low as data grows.
+
+**Strict data isolation** — `userId` always comes from the JWT validated by API Gateway; client-supplied data is never trusted.
+{{% /notice %}}
+
+Actual cost across the entire development process: **$0.85** (details in section 5.12).
