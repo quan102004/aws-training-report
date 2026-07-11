@@ -9,7 +9,7 @@ pre: " <b> 7. </b> "
 
 ## General Evaluation
 
-After completing my **12-week internship at Amazon Web Services (AWS) Vietnam** from **April 20, 2026** to **July 12, 2026**, I consider this to be one of the most valuable milestones in my academic and professional journey. This internship not only provided me with the opportunity to bridge the gap between classroom theory and industry requirements but also broadened my perspective on the operational standards and engineering excellence of a world-class technology company.
+After completing my **12-week internship at Amazon Web Services (AWS) Vietnam** from **April 17, 2026** to **July 30, 2026**, I consider this to be one of the most valuable milestones in my academic and professional journey. This internship not only provided me with the opportunity to bridge the gap between classroom theory and industry requirements but also broadened my perspective on the operational standards and engineering excellence of a world-class technology company.
 
 The highlight of the internship program was the well-structured learning path combined with hands-on practice through the **Job Tracker Platform** project. Having the opportunity to research and build a serverless solution from scratch, and independently handle security (Cognito, WAF, KMS), automation (EventBridge, SQS, SES), and observability (CloudWatch, CloudTrail), helped me establish a systematic system-design mindset and a methodical approach to solving technical problems.
 

@@ -8,7 +8,7 @@ pre: " <b> 6. </b> "
 
 ## Self-Assessment
 
-During my internship at **Amazon Web Services (AWS) Vietnam** from **April 20, 2026** to **July 12, 2026**, I had the opportunity to learn, practice, and apply the knowledge acquired at university in a professional working environment. The internship program allowed me to gain hands-on experience with cloud computing technologies and understand the process of designing, deploying, and managing cloud-based systems on AWS.
+During my internship at **Amazon Web Services (AWS) Vietnam** from **April 17, 2026** to **July 30, 2026**, I had the opportunity to learn, practice, and apply the knowledge acquired at university in a professional working environment. The internship program allowed me to gain hands-on experience with cloud computing technologies and understand the process of designing, deploying, and managing cloud-based systems on AWS.
 
 Throughout the internship, I participated in the development of an **AWS-based E-commerce Website** project, which involved requirement analysis, system architecture design, infrastructure deployment, web application implementation, database configuration, storage management, security enhancement, and system testing. In addition, I completed a series of AWS learning modules and hands-on labs covering core services such as **Amazon VPC, Amazon EC2, Amazon S3, Amazon RDS, AWS IAM, Amazon Route 53, Amazon CloudFront, and Amazon CloudWatch**.
 

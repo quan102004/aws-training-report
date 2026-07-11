@@ -8,7 +8,7 @@ pre: " <b> 7. </b> "
 
 ## Đánh giá chung
 
-Sau **12 tuần thực tập tại Amazon Web Services (AWS) Vietnam** (từ ngày **20/04/2026** đến **12/07/2026**), tôi nhận thấy đây là một trong những cột mốc ý nghĩa nhất trên hành trình học tập của mình. Chương trình thực tập không chỉ cung cấp cho tôi cơ hội cọ xát thực tế để lấp đầy khoảng cách giữa lý thuyết trên giảng đường và nhu cầu thực tế của doanh nghiệp, mà còn mở rộng thế giới quan của tôi về quy trình và tiêu chuẩn làm việc trong một tập đoàn công nghệ hàng đầu thế giới.
+Sau **12 tuần thực tập tại Amazon Web Services (AWS) Vietnam** (từ ngày **17/04/2026** đến **30/07/2026**), tôi nhận thấy đây là một trong những cột mốc ý nghĩa nhất trên hành trình học tập của mình. Chương trình thực tập không chỉ cung cấp cho tôi cơ hội cọ xát thực tế để lấp đầy khoảng cách giữa lý thuyết trên giảng đường và nhu cầu thực tế của doanh nghiệp, mà còn mở rộng thế giới quan của tôi về quy trình và tiêu chuẩn làm việc trong một tập đoàn công nghệ hàng đầu thế giới.
 
 Điểm sáng lớn nhất của chương trình thực tập là mô hình đào tạo kết hợp chặt chẽ giữa việc tự học có định hướng và thực hành thực tế qua dự án **Job Tracker Platform**. Việc được trực tiếp nghiên cứu và xây dựng một giải pháp Serverless từ đầu, tự giải quyết các bài toán về bảo mật (Cognito, WAF, KMS), tự động hóa (EventBridge, SQS, SES) cho đến giám sát hệ thống (CloudWatch, CloudTrail) đã giúp tôi hình thành tư duy hệ thống và cách tiếp cận giải quyết vấn đề một cách bài bản.
 

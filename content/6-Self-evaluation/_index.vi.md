@@ -8,7 +8,7 @@ pre: " <b> 6. </b> "
 
 ## Tự đánh giá quá trình thực tập
 
-Trong suốt thời gian thực tập tại **Amazon Web Services (AWS) Vietnam** từ **20/04/2026** đến **12/07/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng các kiến thức chuyên ngành vào môi trường doanh nghiệp thực tế. Quá trình thực tập giúp tôi làm quen với quy trình xây dựng, triển khai sản phẩm trên nền tảng Cloud, nâng cao tư duy thiết kế hệ thống và rèn luyện phong cách làm việc chuyên nghiệp.
+Trong suốt thời gian thực tập tại **Amazon Web Services (AWS) Vietnam** từ **17/04/2026** đến **30/07/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng các kiến thức chuyên ngành vào môi trường doanh nghiệp thực tế. Quá trình thực tập giúp tôi làm quen với quy trình xây dựng, triển khai sản phẩm trên nền tảng Cloud, nâng cao tư duy thiết kế hệ thống và rèn luyện phong cách làm việc chuyên nghiệp.
 
 Trong kỳ thực tập, tôi tập trung nghiên cứu và phát triển dự án **Job Tracker Platform trên kiến trúc AWS Serverless**. Công việc chính của tôi bao gồm:
 - Phân tích yêu cầu và thiết kế kiến trúc Serverless đáp ứng tiêu chí bảo mật, mở rộng và tối ưu chi phí.
