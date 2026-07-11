@@ -48,11 +48,11 @@ Nếu thao tác nào trả **403 Forbidden**: vào **WAF & Shield** → chọn W
 #### Bước 3: Tạo Hosted Zone trên Route 53
 
 {{% notice info %}}
-Mô hình sử dụng: **mua domain ở nhà đăng ký bên ngoài** (ví dụ Vietnix), còn **Route 53 chỉ làm DNS hosting**. Hai vai trò tách biệt: registrar giữ quyền sở hữu, Route 53 quản lý bản ghi DNS.
+Mô hình sử dụng: **mua domain ở nhà đăng ký bên ngoài** (ví dụ Name.com), còn **Route 53 chỉ làm DNS hosting**. Hai vai trò tách biệt: registrar giữ quyền sở hữu, Route 53 quản lý bản ghi DNS.
 {{% /notice %}}
 
 1. Vào **Route 53** → **Hosted zones** → **Create hosted zone**
-2. **Domain name**: nhập domain đã mua (ví dụ `jobtracker-fcj.io.vn`)
+2. **Domain name**: nhập domain đã mua (ví dụ `jobtracker-fcj.dev`)
 3. **Type**: **Public hosted zone**
 4. Chọn **Create hosted zone**
 5. Hosted zone tạo xong có 2 record mặc định: **NS** và **SOA**. Mở record **NS**, copy đủ **4 nameserver**:

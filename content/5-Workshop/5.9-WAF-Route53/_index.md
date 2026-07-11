@@ -48,11 +48,11 @@ If any action returns **403 Forbidden**: go to **WAF & Shield** → select the W
 #### Step 3: Create a Route 53 Hosted Zone
 
 {{% notice info %}}
-The model used here: **buy the domain from an external registrar** (e.g. Vietnix) while **Route 53 acts purely as DNS hosting**. The roles are separate: the registrar owns the name, Route 53 manages the DNS records.
+The model used here: **buy the domain from an external registrar** (e.g. Name.com) while **Route 53 acts purely as DNS hosting**. The roles are separate: the registrar owns the name, Route 53 manages the DNS records.
 {{% /notice %}}
 
 1. Go to **Route 53** → **Hosted zones** → **Create hosted zone**
-2. **Domain name**: enter your purchased domain (e.g. `jobtracker-fcj.io.vn`)
+2. **Domain name**: enter your purchased domain (e.g. `jobtrackerfcj.dev`)
 3. **Type**: **Public hosted zone**
 4. Choose **Create hosted zone**
 5. The zone comes with two default records: **NS** and **SOA**. Open the **NS** record and copy all **four nameservers**:
